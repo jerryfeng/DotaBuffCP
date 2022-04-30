@@ -211,7 +211,7 @@ var DotaBuffCP = {
 
   getVersion: function () {
 
-    return this.VERSION + '.' + UPDATED;
+    return this.VERSION + '.' + this.UPDATED;
 
   }
 
@@ -431,7 +431,7 @@ var AppRouter = Backbone.Router.extend ({
   about: function () {
     $('#main-container').html (_.template ($('#about-page').html (),
                                            { version: DotaBuffCP.VERSION,
-                                             last_update: UPDATED }));
+                                             last_update: DotaBuffCP.UPDATED }));
     DotaBuffCP.initialized = false;
   }
 
