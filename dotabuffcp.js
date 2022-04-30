@@ -2,6 +2,7 @@
 var DotaBuffCP = {
 
   VERSION: '0.7.1',
+  UPDATED: '2022-04-30',
 
   initialized: false,
 
@@ -210,7 +211,7 @@ var DotaBuffCP = {
 
   getVersion: function () {
 
-    return this.VERSION + '.' + update_time;
+    return this.VERSION + '.' + UPDATED;
 
   }
 
@@ -430,7 +431,7 @@ var AppRouter = Backbone.Router.extend ({
   about: function () {
     $('#main-container').html (_.template ($('#about-page').html (),
                                            { version: DotaBuffCP.VERSION,
-                                             last_update: update_time }));
+                                             last_update: UPDATED }));
     DotaBuffCP.initialized = false;
   }
 
